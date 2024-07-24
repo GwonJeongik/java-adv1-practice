@@ -1,9 +1,9 @@
-package start;
+package thread.start;
 
 public class DaemonThreadMain {
 
     public static void main(String[] args) {
-        System.out.println(Thread.currentThread().getName() + " : main() start");
+        System.out.println(Thread.currentThread().getName() + " : main() thread.start");
 
         DaemonThread daemonThread = new DaemonThread();
         daemonThread.setDaemon(true);
@@ -15,7 +15,7 @@ public class DaemonThreadMain {
     static class DaemonThread extends Thread {
         @Override
         public void run() {
-            System.out.println(Thread.currentThread().getName() + " : run() start");
+            System.out.println(Thread.currentThread().getName() + " : run() thread.start");
 
             try {
                 Thread.sleep(10000);

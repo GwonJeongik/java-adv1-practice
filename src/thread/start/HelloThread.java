@@ -1,4 +1,4 @@
-package start;
+package thread.start;
 
 public class HelloThread extends Thread{
 
