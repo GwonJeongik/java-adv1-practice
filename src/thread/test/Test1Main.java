@@ -4,7 +4,7 @@ import static util.MyLogger.*;
 
 public class Test1Main {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         CounterThread thread = new CounterThread();
         thread.start();
     }
@@ -14,13 +14,12 @@ public class Test1Main {
         @Override
         public void run() {
             for (int i = 0; i < 5; i++) {
-                log("value : " + (i + 1));
+                log("value = " + (i + 1));
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
-
             }
         }
     }
